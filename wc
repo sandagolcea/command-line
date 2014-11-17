@@ -1,0 +1,12 @@
+wc <filename>
+
+Word count command.
+
+Options:
+wc -l : counts lines
+wc -m : counts characters
+wc -w : counts words
+
+Usage:
+cat file1 | wc -m // counts the number of characters in file1
+wc -l filename // counts the number of lines in filename
