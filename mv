@@ -1,0 +1,14 @@
+mv <origin> <destination>
+
+usage examples:
+
+$ mv file1 newFolder/file1
+  move file1 in directory newFolder
+
+$ mv oldfile newfile
+  rename oldfile as newfile 
+
+$ mv file1 ../file2
+  move file1 in the previous directory (root dir of curr)
+  and rename it as file2
+  
