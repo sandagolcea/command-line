@@ -1,0 +1,29 @@
+grep <expression> [file]
+
+grep command searches through the input for the <expression> and returns all the strings that match it.
+
+Use wildcards to enhance your search:
+* - replaces any number of random characters.
+^A - finds all strings that start with A.
+
+My favorite grep command is:
+grep -lr "string_search" *
+This grep finds a string in all directory files and subfolders.
+
+Options:
+-s - silent mode (does not list files it can't access etc)
+-v - invert match (returns all those NOT matching your <expression> )
+-c - counts lines and returns number
+-r / -R - recursive search
+-i - ignore case
+-e - egrep or enhanced grep ( more for regular expressions)
+-l - only list name of file
+
+Examples:
+$ grep 'path' myfile //searches for the word path in myfile
+$ grep '^\.Pa' myfile //searches all words that start with .Pa.. in myfile
+$ grep -v -e 'foo' -e 'bar' myfile //returns all the lines in myfile that do NOT contain foo or bar
+$ egrep '1|2|3' myfile //returns all the lines that contain 1,2 or 3
+$ egrep -r 'content' . //searches curr dir(.) recursively(-r) to find 'content'
+$ grep 'COLOR' .* -s //searches string COLOR in all the hidden files of curr dir (default) in silent mode
+$ grep -lir "sometext" . //recursively list only the name of the file that contains string sometext
